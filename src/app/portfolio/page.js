@@ -3,8 +3,8 @@ import { createClient } from "@/utils/supabase/client";
 import Link from "next/link";
 
 export default async function Portfolio({ params }) {
-  const params = await params;
-  const page = Number(params.page ?? 1);
+  const resolvedParams = await params;
+  const page = Number(resolvedParams.page ?? 1);
 
   const supabase = createClient();
 
